@@ -15,6 +15,13 @@ const action: ActionDefinition<Settings, Payload> = {
       label: 'User ID',
       default: { '@path': '$.userId' }
     },
+    groupId: {
+      type: 'string',
+      description: 'The group ID associated with this event',
+      label: 'Group ID',
+      required: false,
+      default: { '@path': '$.context.groupId' }
+    },
     name: {
       type: 'string',
       required: false,
@@ -31,7 +38,8 @@ const action: ActionDefinition<Settings, Payload> = {
         type: 'screen',
         userId: payload.userId,
         name: payload.name,
-        timestamp: payload.timestamp
+        timestamp: payload.timestamp,
+        ...(payload.groupId ? { context: { groupId: payload.groupId } } : {})
       }
     })
   }

@@ -54,6 +54,9 @@ Object {
 
 exports[`Testing snapshot for actions-accoil-analytics destination: page action - all fields 1`] = `
 Object {
+  "context": Object {
+    "groupId": "u)VTkK@C",
+  },
   "name": "u)VTkK@C",
   "timestamp": Any<String>,
   "type": "page",
@@ -70,6 +73,9 @@ Object {
 
 exports[`Testing snapshot for actions-accoil-analytics destination: screen action - all fields 1`] = `
 Object {
+  "context": Object {
+    "groupId": "UCPyIYOuMak8!!f",
+  },
   "name": "UCPyIYOuMak8!!f",
   "timestamp": Any<String>,
   "type": "screen",
@@ -86,6 +92,9 @@ Object {
 
 exports[`Testing snapshot for actions-accoil-analytics destination: track action - all fields 1`] = `
 Object {
+  "context": Object {
+    "groupId": "l%H42djC%KlO",
+  },
   "event": "l%H42djC%KlO",
   "timestamp": Any<String>,
   "type": "track",

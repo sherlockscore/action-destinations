@@ -23,6 +23,13 @@ const action: ActionDefinition<Settings, Payload> = {
       required: true,
       default: { '@path': '$.userId' }
     },
+    groupId: {
+      type: 'string',
+      description: 'The group ID associated with this event',
+      label: 'Group ID',
+      required: false,
+      default: { '@path': '$.context.groupId' }
+    },
     timestamp: commonFields.timestamp
   },
   perform: (request, { payload, settings }) => {
@@ -32,7 +39,8 @@ const action: ActionDefinition<Settings, Payload> = {
         type: 'track',
         event: payload.event,
         userId: payload.userId,
-        timestamp: payload.timestamp
+        timestamp: payload.timestamp,
+        ...(payload.groupId ? { context: { groupId: payload.groupId } } : {})
       }
     })
   }

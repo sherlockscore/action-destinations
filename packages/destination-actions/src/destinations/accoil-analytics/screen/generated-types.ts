@@ -6,6 +6,10 @@ export interface Payload {
    */
   userId?: string
   /**
+   * The group ID associated with this event
+   */
+  groupId?: string
+  /**
    * The name of the screen
    */
   name?: string

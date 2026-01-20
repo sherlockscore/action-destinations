@@ -10,6 +10,10 @@ export interface Payload {
    */
   userId: string
   /**
+   * The group ID associated with this event
+   */
+  groupId?: string
+  /**
    * The timestamp of the event
    */
   timestamp: string
